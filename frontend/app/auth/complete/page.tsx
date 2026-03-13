@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 
-export default function AuthCompletePage() {
+function AuthCompleteInner() {
   const router = useRouter()
   const params = useSearchParams()
 
@@ -28,5 +28,17 @@ export default function AuthCompletePage() {
         <p className="text-muted-foreground text-sm">Signing you in...</p>
       </div>
     </div>
+  )
+}
+
+export default function AuthCompletePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <AuthCompleteInner />
+    </Suspense>
   )
 }
