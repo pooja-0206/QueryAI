@@ -4,7 +4,7 @@ import path from "path";
 import multer from "multer";
 import { fileURLToPath } from "url";
 import fs from "fs";
-import Database from "@db-pkg/better-sqlite3";
+import Database from "better-sqlite3";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import Papa from "papaparse";
