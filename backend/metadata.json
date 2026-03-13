@@ -1,0 +1,5 @@
+{
+  "name": "VoxSQL - AI Voice Business Intelligence",
+  "description": "A secure AI-powered Voice-to-SQL platform for natural language data analysis with privacy-first architecture.",
+  "requestFramePermissions": ["microphone"]
+}
